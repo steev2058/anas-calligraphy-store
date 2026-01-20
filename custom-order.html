@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>التخطيط حسب الطلب | متجر أنس لأدوات الخط</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <img src="assets/images/logo.png" alt="متجر أنس" class="logo">
+  <nav class="nav">
+    <a href="index.html">الرئيسية</a>
+    <a href="products.html">المنتجات</a>
+    <a href="custom-order.html" class="active">التخطيط حسب الطلب</a>
+     <a href="works.html">الأعمال</a>
+    <a href="about.html">عن الخطاط</a>
+  </nav>
+</header>
+
+<section class="page-title">
+  <h1>التخطيط حسب الطلب</h1>
+  <p>لكل اسم حكاية… ولكل حكاية خط يليق بها</p>
+</section>
+
+<section class="custom-info">
+  <p>
+    نقدّم في متجر أنس خدمة التخطيط اليدوي حسب الطلب،
+    حيث يتم تنفيذ العمل بعناية تامة وبأسلوب فني أصيل،
+    سواء كان الاسم لشخص، عبارة خاصة، لوحة، أو هدية مميّزة.
+  </p>
+</section>
+
+<section class="custom-steps">
+  <h2>كيف يتم الطلب؟</h2>
+
+  <div class="steps-grid">
+    <div class="step">
+      <span>1</span>
+      <p>ترسل الاسم أو العبارة المطلوبة</p>
+    </div>
+
+    <div class="step">
+      <span>2</span>
+      <p>تحديد الغرض (لوحة، هدية، شعار…)</p>
+    </div>
+
+    <div class="step">
+      <span>3</span>
+      <p>الاتفاق على التفاصيل والسعر</p>
+    </div>
+
+    <div class="step">
+      <span>4</span>
+      <p>تنفيذ العمل وتسليمه</p>
+    </div>
+  </div>
+</section>
+<section class="works-section">
+  <h2>نماذج من الأعمال</h2>
+  <p class="works-note">
+    بعض الأعمال المنفّذة يدويًا، تعكس الأسلوب والدقّة في التخطيط.
+  </p>
+
+ <div class="works-grid">
+  <img class="work-thumb" src="assets/images/works/work-1.jpg" data-full="assets/images/works/work-1.jpg" alt="عمل خطي 1" loading="lazy">
+  <img class="work-thumb" src="assets/images/works/work-2.jpg" data-full="assets/images/works/work-2.jpg" alt="عمل خطي 2" loading="lazy">
+  <img class="work-thumb" src="assets/images/works/work-3.jpg" data-full="assets/images/works/work-3.jpg" alt="عمل خطي 3" loading="lazy">
+</div>
+
+</section>
+
+<section class="order-form">
+  <h2>نموذج طلب مبدئي</h2>
+  <p class="note">
+    هذا النموذج لتوضيح طلبك، وسيتم التواصل معك مباشرة عبر واتساب.
+  </p>
+
+  <form onsubmit="sendWhatsApp(); return false;">
+    <input type="text" id="name" placeholder="الاسم أو العبارة المطلوبة" required>
+
+    <select id="type">
+      <option value="">نوع الطلب</option>
+      <option>اسم شخص</option>
+      <option>عبارة</option>
+      <option>لوحة فنية</option>
+      <option>هدية</option>
+      <option>شعار</option>
+    </select>
+
+    <textarea id="notes" placeholder="ملاحظات إضافية (اختياري)"></textarea>
+
+    <button type="submit">إرسال الطلب عبر واتساب</button>
+  </form>
+</section>
+
+<section class="contact-info">
+  <h2>التواصل المباشر</h2>
+  <p><strong>الخطاط:</strong> أنس جحه</p>
+</section>
+
+<footer class="footer">
+  <p>
+    متجر أنس لأدوات الخط — بإدارة أنس جحه<br>
+    والله ولي التوفيق
+  </p>
+</footer>
+
+<!-- زر واتساب عائم -->
+<a href="https://wa.me/963993572402" class="whatsapp-float">واتساب</a>
+
+<script>
+function sendWhatsApp() {
+  const name = document.getElementById('name').value;
+  const type = document.getElementById('type').value;
+  const notes = document.getElementById('notes').value;
+
+  const message =
+    "السلام عليكم، أود طلب تخطيط حسب الطلب:%0A" +
+    "الاسم / العبارة: " + name + "%0A" +
+    "نوع الطلب: " + type + "%0A" +
+    "ملاحظات: " + notes;
+
+  window.open("https://wa.me/963993572402?text=" + message, "_blank");
+}
+</script>
+<!-- Lightbox -->
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button class="lightbox-close" type="button" aria-label="إغلاق">×</button>
+
+  <button class="lightbox-nav prev" aria-label="السابق">⟨</button>
+  <img id="lightbox-img" class="lightbox-img" alt="">
+  <button class="lightbox-nav next" aria-label="التالي">⟩</button>
+</div>
+
+
+</body>
+
+</body>
+
+<script>
+function sendWhatsApp() {
+  const name = document.getElementById('name').value;
+  const type = document.getElementById('type').value;
+  const notes = document.getElementById('notes').value;
+
+  const message =
+    "السلام عليكم، أود طلب تخطيط حسب الطلب:%0A" +
+    "الاسم / العبارة: " + name + "%0A" +
+    "نوع الطلب: " + type + "%0A" +
+    "ملاحظات: " + notes;
+
+  window.open("https://wa.me/963993572402?text=" + message, "_blank");
+}
+
+/* ============================= */
+/* ✨ Lightbox Logic */
+/* ============================= */
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.lightbox-close');
+
+document.querySelectorAll('.work-thumb').forEach(img => {
+  img.addEventListener('click', () => {
+    const src = img.getAttribute('data-full') || img.src;
+    lightboxImg.src = src;
+    lightboxImg.alt = img.alt || 'عمل خطي';
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  lightboxImg.src = '';
+  document.body.style.overflow = '';
+}
+
+closeBtn.addEventListener('click', closeLightbox);
+
+// إغلاق عند الضغط خارج الصورة
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+// إغلاق بزر ESC
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+});
+</script>
+<script>
+/* ============================= */
+/* ⟨ ⟩ Lightbox Gallery Logic */
+/* ============================= */
+
+const thumbs = Array.from(document.querySelectorAll('.work-thumb'));
+let currentIndex = 0;
+
+function openLightboxByIndex(index) {
+  const img = thumbs[index];
+  if (!img) return;
+
+  currentIndex = index;
+  lightboxImg.src = img.getAttribute('data-full') || img.src;
+  lightboxImg.alt = img.alt || 'عمل خطي';
+  lightbox.classList.add('open');
+  lightbox.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+// عدّل حدث النقر ليستخدم الفهرس
+thumbs.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    openLightboxByIndex(index);
+  });
+});
+
+// أزرار التنقل
+document.querySelector('.lightbox-nav.prev').addEventListener('click', (e) => {
+  e.stopPropagation();
+  currentIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
+  openLightboxByIndex(currentIndex);
+});
+
+document.querySelector('.lightbox-nav.next').addEventListener('click', (e) => {
+  e.stopPropagation();
+  currentIndex = (currentIndex + 1) % thumbs.length;
+  openLightboxByIndex(currentIndex);
+});
+
+// تنقّل بالكيبورد
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('open')) return;
+
+  if (e.key === 'ArrowRight') {
+    // RTL: السهم اليمين = السابق
+    currentIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
+    openLightboxByIndex(currentIndex);
+  }
+
+  if (e.key === 'ArrowLeft') {
+    // RTL: السهم اليسار = التالي
+    currentIndex = (currentIndex + 1) % thumbs.length;
+    openLightboxByIndex(currentIndex);
+  }
+});
+</script>
+<script>
+/* ============================= */
+/* 👆 Swipe Support for Lightbox */
+/* ============================= */
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+lightbox.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+lightbox.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+}, { passive: true });
+
+function handleSwipe() {
+  const threshold = 50; // أقل مسافة للسحب
+  const diff = touchEndX - touchStartX;
+
+  if (Math.abs(diff) < threshold) return;
+
+  if (diff > 0) {
+    // سحب يمين ➜ السابق (RTL)
+    currentIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
+    openLightboxByIndex(currentIndex);
+  } else {
+    // سحب يسار ➜ التالي (RTL)
+    currentIndex = (currentIndex + 1) % thumbs.length;
+    openLightboxByIndex(currentIndex);
+  }
+}
+</script>
+
+</html>
